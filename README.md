@@ -3,7 +3,7 @@ Extracción y digitación automática de docuentos al ECUAPASS.
 Esta versión trabaja tanto extrayendo de la Web como desde un Pdf (ALDIA)
 
 ## LOG
-Feb/XX: r0.9779 ALL: Improved CPI 'GASTOS'. Fixed empty MCI 'aduana'. Log MCI Transportista.  
+Mar/17: r0.9779 GUI: Empresa to Bot. Improved CPI 'Gastos'. Fixed empty MCI 'aduana'. Log MCI Transportista.  
 
 Feb/24: r0.9778 EcuapassBot MenuIzquierdo. New 'getInfoAduana' for all. New winexe for .pycs.
 Feb/22: r0.9777 Creating 'create-exe.py' script to use only .pyc files for win exe.
