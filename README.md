@@ -3,6 +3,8 @@ Extracción y digitación automática de documentos al sistema ECUAPASS.
 jGUI calls pyCommander communicating with parameters and string responses.
 
 ## LOG
+Mar/19: r0.9782 Testing Patches.
+
 Mar/12: r0.9781 Added more MenuIzquierdo images
 
 Mar/11: r0.9780 Reduced Image detection to 70% Only for MenuIzquierdo
