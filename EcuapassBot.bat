@@ -1,12 +1,26 @@
 taskkill /IM "ecuapass_commander.exe" /F
 
+@echo off
+cd /d "%~dp0"  REM Ensure script runs in the repo directory
+
+echo "========================================================"
 echo "+++ Descargando Actualizaciones EcuapassBot..."
-::git reset --hard 
+echo "========================================================"
+REM Prevent Git from overwriting the patched executable
+git update-index --assume-unchanged updated.bat
+git update-index --assume-unchanged ecuapass_commander\ecuapass_commander.exe
+
+REM Fetch and update repository while keeping user changes
+git fetch origin main  && ^
+git reset --keep origin/main && ^
 git pull origin main
 
-echo "+++ Verificando si se actualiza aplicacion principal..."
-call patches\patch-update-exe-win.bat
+echo "========================================================"
+echo "+++ Realizando modificaciones..."
+echo "========================================================"
+call updates.bat
 
+echo "========================================================"
 echo "+++ Ejecutando EcuapassBotGUI.exe"
-echo %cd%
+echo "========================================================"
 EcuapassBotGUI.exe
