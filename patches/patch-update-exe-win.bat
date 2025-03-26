@@ -43,9 +43,9 @@ for /f "delims=" %%P in ('dir /b /o:n patch_*.vcdiff') do (
 
     :: Check if the patch is already applied
     findstr /C:"!PATCH_VERSION!" "%LOG_FILE%" >nul
-    if !errorlevel! == 0 (
-        echo +++ Patch !PATCH_VERSION! already applied. Skipping...
-    ) else (
+::    if !errorlevel! == 0 (
+::        echo +++ Patch !PATCH_VERSION! already applied. Skipping...
+::    ) else (
         echo +++ Applying patch !PATCH_VERSION!...
         xdelta3.exe -d -s "%ORIGINAL_FILE%" "!PATCH_FILE!" "%NEW_FILE%"
 
@@ -58,7 +58,7 @@ for /f "delims=" %%P in ('dir /b /o:n patch_*.vcdiff') do (
             echo +++ Patch !PATCH_VERSION! failed! Stopping update process.
             goto end
         )
-    )
+::    )
 )
 
 :end
