@@ -7,8 +7,7 @@ echo "========================================================"
 echo "+++ Descargando Actualizaciones EcuapassBot..."
 echo "========================================================"
 REM Prevent Git from overwriting the patched executable
-git update-index --assume-unchanged updated.bat
-git update-index --assume-unchanged ecuapass_commander\ecuapass_commander.exe
+git update-index --assume-unchanged updates.bat ecuapass_commander\ecuapass_commander.exe
 
 REM Fetch and update repository while keeping user changes
 git fetch origin main  && ^
