@@ -39,7 +39,7 @@ for /f "delims=" %%P in ('dir /b /o:n patch_*.vcdiff') do (
     set PATCH_VERSION=%%~nP
     set PATCH_VERSION=!PATCH_VERSION:update_patch_=!
 
-    echo +++ Checking Patch: !PATCH_FILE!
+    echo +++ Checking and Applying Patch: !PATCH_FILE!
 
     :: Check if the patch is already applied
     findstr /C:"!PATCH_VERSION!" "%LOG_FILE%" >nul
