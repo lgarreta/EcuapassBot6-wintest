@@ -49,14 +49,14 @@ findstr /C:"%PATCH_VERSION%" "%LOG_FILE%" >nul && (
 )
 
 echo +++ Applying patch %PATCH_FILE%...
-xdelta3.exe -d -s "%ORIGINAL_FILE%" "%PATCH_FILE%" "%NEW_FILE%"
+xdelta3.exe -f -d -s "%ORIGINAL_FILE%" "%PATCH_FILE%" "%NEW_FILE%"
 
 if not exist "%NEW_FILE%" (
-    echo !!! ERROR: Patch failed (xdelta3 error). Aborting.
+    echo !!! ERROR: Patch failed--xdelta3 error--Aborting.
     goto end
 )
 
-:: Update executable
+echo +++ Update executable
 del "%CURRENT_FILE%" && (
     move "%NEW_FILE%" "%CURRENT_FILE%" >nul || (
         echo !!! ERROR: Failed to replace EXE. Restore from backup if needed.
