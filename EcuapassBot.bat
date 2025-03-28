@@ -1,4 +1,4 @@
-taskkill /IM "ecuapass_commander.exe" /F >nul 
+taskkill /IM "ecuapass_commander.exe" /F 2>nul 
 
 @echo off
 cd /d "%~dp0"  REM Ensure script runs in the repo directory
