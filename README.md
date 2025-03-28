@@ -3,6 +3,7 @@ Extracción y digitación automática de documentos al sistema ECUAPASS.
 jGUI calls pyCommander communicating with parameters and string responses.
 
 ## LOG
+Mar/27: r0.9787 patch_002: getFloatValue for ALDIA, TSP.
 Mar/27: r0.9786 New .bat for patch: Only one last patch file
 
 Mar/26: r0.9785 Testing new git update bats
